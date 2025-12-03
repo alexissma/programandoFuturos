@@ -2167,64 +2167,64 @@
         const closePanel = document.getElementById('closePanel');
         const topicItems = document.querySelectorAll('.topic-item');
 
+
         // Função para abrir o painel lateral
-// Função para abrir o painel lateral
-function openSidePanel(topicKey) {
-    const topic = topicsData[topicKey];
-    if (!topic) return;
+        function openSidePanel(topicKey) {
+            const topic = topicsData[topicKey];
+            if (!topic) return;
 
-    const completedExercises = progressTracker.data.exercisesCompleted[topicKey]?.length || 0;
-    const totalExercises = topic.exercises?.length || 0;
-    const isCompleted = progressTracker.data.topicProgress[topicKey]?.completed || false;
+            const completedExercises = progressTracker.data.exercisesCompleted[topicKey]?.length || 0;
+            const totalExercises = topic.exercises?.length || 0;
+            const isCompleted = progressTracker.data.topicProgress[topicKey]?.completed || false;
 
-    panelTitle.textContent = topic.title;
+            panelTitle.textContent = topic.title;
 
-    const topicsHtml = topic.topics.map(item => {
-        const detailed = topic.detailedResources?.[item] || [];
-        const detailedHtml = detailed.length
-            ? `<ul class="detailed-resource-list">
-                    ${detailed.map(r => `<li>
-                        <a href="${r.url}" target="_blank" class="resource-link">${r.name}</a> 
-                        <span class="resource-type">${r.type}</span>
-                    </li>`).join('')}
-               </ul>`
-            : '';
-        return `<li>
-                    <strong>${item}</strong>
-                    ${detailedHtml}
-                </li>`;
-    }).join('');
+            const topicsHtml = topic.topics.map(item => {
+                const detailed = topic.detailedResources?.[item] || [];
+                const detailedHtml = detailed.length
+                    ? `<ul class="detailed-resource-list">
+                            ${detailed.map(r => `<li>
+                                <a href="${r.url}" target="_blank" class="resource-link">${r.name}</a> 
+                                <span class="resource-type">${r.type}</span>
+                            </li>`).join('')}
+                    </ul>`
+                    : '';
+                return `<li>
+                            <strong>${item}</strong>
+                            ${detailedHtml}
+                        </li>`;
+            }).join('');
 
-    panelContent.innerHTML = `
-        <div class="topic-overview">
-            <p>${topic.description}</p>
-            <div class="points-display">
-                <strong>🎯 Pontos: ${topic.points} XP</strong>
-            </div>
-        </div>
+            panelContent.innerHTML = `
+                <div class="topic-overview">
+                    <p>${topic.description}</p>
+                    <div class="points-display">
+                        <strong>🎯 Pontos: ${topic.points} XP</strong>
+                    </div>
+                </div>
 
-        <div class="resource-section">
-            <h4>📚 O que você vai aprender:</h4>
-            <ul class="topic-list">
-                ${topicsHtml}
-            </ul>
-        </div>
+                <div class="resource-section">
+                    <h4>📚 O que você vai aprender:</h4>
+                    <ul class="topic-list">
+                        ${topicsHtml}
+                    </ul>
+                </div>
 
-        ${!isCompleted ? `
-            <button class="start-topic-btn" onclick="startTopic('${topicKey}')">
-                ${completedExercises > 0 ? '📖 Continuar Exercícios' : '🚀 Começar Exercícios'}
-            </button>
-        ` : `
-            <div class="completed-topic">
-                <p style="text-align: center; color: #4caf50; font-weight: bold;">
-                    ✅ Tópico Concluído!
-                </p>
-            </div>
-        `}
-    `;
+                ${!isCompleted ? `
+                    <button class="start-topic-btn" onclick="startTopic('${topicKey}')">
+                        ${completedExercises > 0 ? '📖 Continuar Exercícios' : '🚀 Começar Exercícios'}
+                    </button>
+                ` : `
+                    <div class="completed-topic">
+                        <p style="text-align: center; color: #4caf50; font-weight: bold;">
+                            ✅ Tópico Concluído!
+                        </p>
+                    </div>
+                `}
+            `;
 
-    sidePanel.classList.add('active');
-}
+            sidePanel.classList.add('active');
+        }
 
 
         // Função para fechar o painel lateral

@@ -1279,7 +1279,7 @@
     <div class="trilha-path">
         <h2 class="path-title">Caminho de Aprendizado</h2>
         <div class="topics-container">
-            <div class="topic-item" data-topic="intro-dados" data-points="100">
+            <div class="topic-item" data-topic="estatistica" data-points="100">
                 <div class="topic-number">1</div>
                 <div class="topic-content">
                     <h3>Fundamentos de Dados</h3>
@@ -1287,62 +1287,62 @@
                         <span class="points">+100 XP</span>
                     </div>
                 </div>
-                <div id="status-intro-dados" class="topic-status">⭕</div>
+                <div id="status-estatistica" class="topic-status">⭕</div>
             </div>
 
-            <div class="topic-item" data-topic="python-pandas" data-points="150">
+            <div class="topic-item" data-topic="python" data-points="110">
                 <div class="topic-number">2</div>
                 <div class="topic-content">
                     <h3>Manipulação de Dados com Python</h3>
                     <div class="topic-progress">
-                        <span class="points">+150 XP</span>
+                        <span class="points">+110 XP</span>
                     </div>
                 </div>
-                <div id="status-python-pandas" class="topic-status">⭕</div>
+                <div id="status-python" class="topic-status">⭕</div>
             </div>
 
-            <div class="topic-item" data-topic="sql" data-points="150">
+            <div class="topic-item" data-topic="bigData" data-points="95">
                 <div class="topic-number">3</div>
                 <div class="topic-content">
                     <h3>Bancos de Dados e SQL</h3>
                     <div class="topic-progress">
-                        <span class="points">+150 XP</span>
+                        <span class="points">+95 XP</span>
                     </div>
                 </div>
-                <div id="status-sql" class="topic-status">🔒</div>
+                <div id="status-bigData" class="topic-status">🔒</div>
             </div>
 
-            <div class="topic-item" data-topic="visualizacao" data-points="200">
+            <div class="topic-item" data-topic="visualizacao" data-points="100">
                 <div class="topic-number">4</div>
                 <div class="topic-content">
                     <h3>Visualização de Dados</h3>
                     <div class="topic-progress">
-                        <span class="points">+200 XP</span>
+                        <span class="points">+100 XP</span>
                     </div>
                 </div>
                 <div id="status-visualizacao" class="topic-status">🔒</div>
             </div>
 
-            <div class="topic-item" data-topic="machine-learning" data-points="250">
+            <div class="topic-item" data-topic="machineLearning" data-points="120">
                 <div class="topic-number">5</div>
                 <div class="topic-content">
                     <h3>Introdução ao Machine Learning</h3>
                     <div class="topic-progress">
-                        <span class="points">+250 XP</span>
+                        <span class="points">+120 XP</span>
                     </div>
                 </div>
-                <div id="status-machine-learning" class="topic-status">🔒</div>
+                <div id="status-machineLearning" class="topic-status">🔒</div>
             </div>
 
-            <div class="topic-item" data-topic="projeto-final" data-points="300">
+            <div class="topic-item" data-topic="projetosPraticos" data-points="125">
                 <div class="topic-number">6</div>
                 <div class="topic-content">
                     <h3>Projeto Final: Análise Completa de Dados</h3>
                     <div class="topic-progress">
-                        <span class="points">+300 XP</span>
+                        <span class="points">+125 XP</span>
                     </div>
                 </div>
-                <div id="status-projeto-final" class="topic-status">🔒</div>
+                <div id="status-projetosPraticos" class="topic-status">🔒</div>
             </div>
         </div>
     </div>
@@ -1358,6 +1358,8 @@
         </div>
     </div>
 </div>
+
+
 
 <!-- Patinho da TI - Sistema de Dicas -->
 <div class="patinho-helper" id="patinhoHelper">
@@ -1633,196 +1635,513 @@
         }
 
         // Dados dos tópicos com exercícios
-        const topicsData = {
-        fundamentos: {
-        title: 'Fundamentos do Desenvolvimento Mobile',
-        description: 'Aprenda os conceitos essenciais para criar aplicativos Android e iOS, entendendo a diferença entre apps nativos e multiplataforma.',
+    const topicsData = {
+    estatistica: {
+        title: 'Fundamentos de Estatística e Probabilidade',
+        description: 'Aprenda os conceitos essenciais de estatística e probabilidade, fundamentais para análise de dados e tomada de decisão baseada em dados.',
         points: 100,
-        resources: [
-            { name: 'Android Developers - Fundamentos', url: 'https://developer.android.com/guide', type: 'Documentação' },
-            { name: 'Apple Developer - iOS Essentials', url: 'https://developer.apple.com/learn/curriculum/', type: 'Guia' },
-            { name: 'Introdução ao Flutter', url: 'https://flutter.dev/docs/get-started/install', type: 'Tutorial' }
-        ],
+        detailedResources: {
+            'Medidas de tendência central': [
+                { name: 'Khan Academy - Média, Mediana e Moda', url: 'https://pt.khanacademy.org/math/statistics-probability', type: 'Tutorial' },
+                { name: 'Vídeo: Estatística Básica', url: 'https://www.youtube.com/watch?v=3MQMb4nP44w', type: 'Vídeo' },
+                { name: 'Artigo: Como usar média, mediana e moda', url: 'https://www.investopedia.com/terms/m/mean-median-mode.asp', type: 'Artigo' }
+            ],
+            'Dispersão e variância': [
+                { name: 'W3Schools - Variância e Desvio Padrão', url: 'https://www.w3schools.com/python/numpy/numpy_variance.asp', type: 'Documentação' },
+                { name: 'Vídeo: Desvio padrão explicado', url: 'https://www.youtube.com/watch?v=Vfo5le26IhY', type: 'Vídeo' }
+            ],
+            'Probabilidade básica': [
+                { name: 'MIT OpenCourseWare - Probabilidade', url: 'https://ocw.mit.edu/courses/mathematics', type: 'Guia' },
+                { name: 'Khan Academy - Probabilidade', url: 'https://pt.khanacademy.org/math/statistics-probability/probability-library', type: 'Tutorial' }
+            ],
+            'Distribuições estatísticas': [
+                { name: 'Tutorial: Distribuições Normais e Binomiais', url: 'https://www.statisticshowto.com/probability-and-statistics/', type: 'Tutorial' },
+                { name: 'Vídeo: Distribuição Normal', url: 'https://www.youtube.com/watch?v=KbB0FjPg0rY', type: 'Vídeo' }
+            ],
+            'Correlação e regressão': [
+                { name: 'Artigo: Correlação e Regressão Linear', url: 'https://www.investopedia.com/terms/c/correlation.asp', type: 'Artigo' },
+                { name: 'Vídeo: Regressão Linear Simples', url: 'https://www.youtube.com/watch?v=J_LnPL3Qg70', type: 'Vídeo' }
+            ]
+        },
         topics: [
-            'Diferenças entre apps nativos, híbridos e multiplataforma',
-            'Ciclo de vida de um aplicativo mobile',
-            'Ambiente de desenvolvimento Android e iOS',
-            'Emuladores e dispositivos físicos',
-            'Introdução ao Flutter e React Native'
+            'Medidas de tendência central',
+            'Dispersão e variância',
+            'Probabilidade básica',
+            'Distribuições estatísticas',
+            'Correlação e regressão'
         ],
         exercises: [
             {
-                id: 'mobile_1',
-                question: 'Qual é a principal diferença entre aplicativos nativos e multiplataforma?',
-                options: [
-                    'Apps nativos rodam apenas em navegadores',
-                    'Apps multiplataforma funcionam em mais de um sistema operacional',
-                    'Apps nativos não podem acessar hardware do dispositivo',
-                    'Apps multiplataforma não podem ser publicados nas lojas'
-                ],
-                correct: 1,
-                explanation: 'Aplicativos multiplataforma (como Flutter e React Native) permitem o desenvolvimento para Android e iOS com o mesmo código.'
+                id: 'stats_1',
+                question: 'Qual é a medida de tendência central mais sensível a valores extremos?',
+                options: ['Média', 'Mediana', 'Moda', 'Variância'],
+                correct: 0,
+                explanation: 'A média é influenciada por valores extremos, ao contrário da mediana.'
             },
             {
-                id: 'mobile_2',
-                question: 'Qual é o principal IDE para desenvolvimento Android?',
-                options: ['Xcode', 'Android Studio', 'Visual Studio', 'Eclipse'],
+                id: 'stats_2',
+                question: 'O que representa o desvio padrão?',
+                options: ['A média dos valores', 'A dispersão dos dados em relação à média', 'O valor mais frequente', 'O valor mínimo do conjunto'],
                 correct: 1,
-                explanation: 'O Android Studio é o ambiente oficial de desenvolvimento para Android, fornecido pelo Google.'
+                explanation: 'O desvio padrão indica o quanto os dados variam em torno da média.'
             },
             {
-                id: 'mobile_3',
-                question: 'O que é um emulador no contexto do desenvolvimento mobile?',
+                id: 'stats_3',
+                question: 'Qual distribuição é usada para eventos com dois resultados possíveis?',
+                options: ['Normal', 'Binomial', 'Uniforme', 'Exponencial'],
+                correct: 1,
+                explanation: 'A distribuição binomial descreve eventos com dois resultados possíveis, como sucesso ou fracasso.'
+            },
+            {
+                id: 'stats_4',
+                question: 'O que a correlação indica entre duas variáveis?',
                 options: [
-                    'Um simulador de rede',
-                    'Um programa que emula o hardware de um dispositivo móvel',
-                    'Uma ferramenta de debug remoto',
-                    'Um gerenciador de banco de dados local'
+                    'A diferença entre elas',
+                    'A relação linear entre elas',
+                    'A média combinada',
+                    'O valor máximo de uma variável'
                 ],
                 correct: 1,
-                explanation: 'O emulador simula o comportamento de um dispositivo real, permitindo testar o app sem precisar de um smartphone físico.'
+                explanation: 'A correlação mede a força e a direção da relação linear entre duas variáveis.'
+            },
+            {
+                id: 'stats_5',
+                question: 'Qual é o objetivo da regressão linear?',
+                options: [
+                    'Classificar dados em categorias',
+                    'Prever valores de uma variável com base em outra',
+                    'Calcular média e mediana',
+                    'Determinar a moda'
+                ],
+                correct: 1,
+                explanation: 'A regressão linear busca modelar a relação entre uma variável dependente e uma ou mais independentes para previsão.'
             }
         ]
     },
-    interface: {
-        title: 'Design e Interface (UI/UX)',
-        description: 'Aprenda a criar interfaces bonitas, responsivas e intuitivas utilizando os princípios de Material Design e Human Interface Guidelines.',
+
+    python: {
+        title: 'Programação com Python para Análise de Dados',
+        description: 'Aprenda a programar em Python para coletar, manipular e analisar dados de forma eficiente, utilizando bibliotecas essenciais como Pandas, NumPy e Matplotlib.',
+        points: 110,
+        detailedResources: {
+            'Introdução ao Python': [
+                { name: 'Python Official Docs', url: 'https://docs.python.org/3/tutorial/index.html', type: 'Documentação' },
+                { name: 'Curso Python para Iniciantes', url: 'https://www.cursoemvideo.com/course/curso-python-3/', type: 'Tutorial' },
+                { name: 'Vídeo: Fundamentos do Python', url: 'https://www.youtube.com/watch?v=kqtD5dpn9C8', type: 'Vídeo' }
+            ],
+            'Manipulação de dados com Pandas': [
+                { name: 'Pandas Documentation', url: 'https://pandas.pydata.org/docs/', type: 'Documentação' },
+                { name: 'Tutorial: Pandas para análise de dados', url: 'https://realpython.com/pandas-python-explore-dataset/', type: 'Tutorial' },
+                { name: 'Vídeo: Introdução ao Pandas', url: 'https://www.youtube.com/watch?v=vmEHCJofslg', type: 'Vídeo' }
+            ],
+            'Cálculos e arrays com NumPy': [
+                { name: 'NumPy Documentation', url: 'https://numpy.org/doc/stable/', type: 'Documentação' },
+                { name: 'Tutorial: NumPy para iniciantes', url: 'https://realpython.com/numpy-tutorial/', type: 'Tutorial' },
+                { name: 'Vídeo: NumPy explicado', url: 'https://www.youtube.com/watch?v=QUT1VHiLmmI', type: 'Vídeo' }
+            ],
+            'Visualização de dados com Matplotlib e Seaborn': [
+                { name: 'Matplotlib Documentation', url: 'https://matplotlib.org/stable/contents.html', type: 'Documentação' },
+                { name: 'Seaborn Official Docs', url: 'https://seaborn.pydata.org/', type: 'Documentação' },
+                { name: 'Vídeo: Gráficos com Matplotlib e Seaborn', url: 'https://www.youtube.com/watch?v=GcXcSZ0gQps', type: 'Vídeo' }
+            ],
+            'Leitura e escrita de arquivos CSV e Excel': [
+                { name: 'Pandas CSV Guide', url: 'https://pandas.pydata.org/docs/user_guide/io.html', type: 'Tutorial' },
+                { name: 'Vídeo: Manipulação de arquivos CSV com Pandas', url: 'https://www.youtube.com/watch?v=hmGCgIq3VjY', type: 'Vídeo' }
+            ]
+        },
+        topics: [
+            'Introdução ao Python',
+            'Manipulação de dados com Pandas',
+            'Cálculos e arrays com NumPy',
+            'Visualização de dados com Matplotlib e Seaborn',
+            'Leitura e escrita de arquivos CSV e Excel'
+        ],
+        exercises: [
+            {
+                id: 'python_1',
+                question: 'Qual biblioteca é mais utilizada para análise e manipulação de dados em Python?',
+                options: ['NumPy', 'Pandas', 'Matplotlib', 'Seaborn'],
+                correct: 1,
+                explanation: 'Pandas é a principal biblioteca para análise e manipulação de dados em Python, permitindo trabalhar com DataFrames e séries.'
+            },
+            {
+                id: 'python_2',
+                question: 'Como criar um array NumPy a partir de uma lista Python?',
+                options: [
+                    'np.array(lista)',
+                    'np.list(lista)',
+                    'pd.array(lista)',
+                    'np.create(lista)'
+                ],
+                correct: 0,
+                explanation: 'O comando np.array(lista) converte uma lista Python em um array NumPy.'
+            },
+            {
+                id: 'python_3',
+                question: 'Qual função do Pandas é usada para ler arquivos CSV?',
+                options: ['pd.read_csv()', 'pd.load_csv()', 'pd.open_csv()', 'pd.read_file()'],
+                correct: 0,
+                explanation: 'A função pd.read_csv() do Pandas permite ler arquivos CSV e carregar em DataFrames.'
+            },
+            {
+                id: 'python_4',
+                question: 'Para criar um gráfico de linhas simples, qual biblioteca é mais indicada?',
+                options: ['NumPy', 'Pandas', 'Matplotlib', 'Seaborn'],
+                correct: 2,
+                explanation: 'Matplotlib é a biblioteca básica para criar gráficos em Python, incluindo gráficos de linhas, barras e dispersão.'
+            },
+            {
+                id: 'python_5',
+                question: 'Qual biblioteca é mais recomendada para criar gráficos estatísticos avançados?',
+                options: ['Matplotlib', 'Seaborn', 'NumPy', 'Pandas'],
+                correct: 1,
+                explanation: 'Seaborn fornece gráficos estatísticos avançados e integra-se bem com Pandas para análise de dados.'
+            }
+        ]
+    },
+
+    machineLearning: {
+        title: 'Machine Learning e Modelos Preditivos',
+        description: 'Aprenda os conceitos de machine learning, incluindo algoritmos supervisionados e não supervisionados, validação de modelos e predição de dados.',
         points: 120,
-        resources: [
-            { name: 'Material Design 3', url: 'https://m3.material.io/', type: 'Guia' },
-            { name: 'Human Interface Guidelines', url: 'https://developer.apple.com/design/human-interface-guidelines/', type: 'Guia' },
-            { name: 'Figma para Mobile', url: 'https://www.figma.com/resources/learn-design/', type: 'Ferramenta' }
-        ],
+        detailedResources: {
+            'Introdução ao Machine Learning': [
+                { name: 'Scikit-learn Official Docs', url: 'https://scikit-learn.org/stable/', type: 'Documentação' },
+                { name: 'Curso Introdutório de Machine Learning', url: 'https://www.coursera.org/learn/machine-learning', type: 'Tutorial' },
+                { name: 'Vídeo: Conceitos de Machine Learning', url: 'https://www.youtube.com/watch?v=Gv9_4yMHFhI', type: 'Vídeo' }
+            ],
+            'Algoritmos Supervisionados': [
+                { name: 'Regressão Linear e Logística', url: 'https://scikit-learn.org/stable/supervised_learning.html', type: 'Documentação' },
+                { name: 'Tutorial: Classificação e Regressão', url: 'https://realpython.com/python-machine-learning/', type: 'Tutorial' },
+                { name: 'Vídeo: Algoritmos Supervisionados', url: 'https://www.youtube.com/watch?v=9yl6-HEY7_s', type: 'Vídeo' }
+            ],
+            'Algoritmos Não Supervisionados': [
+                { name: 'Clusterização e Redução de Dimensionalidade', url: 'https://scikit-learn.org/stable/unsupervised_learning.html', type: 'Documentação' },
+                { name: 'Vídeo: Aprendizado Não Supervisionado', url: 'https://www.youtube.com/watch?v=evt3Hh_0ps0', type: 'Vídeo' }
+            ],
+            'Validação e Avaliação de Modelos': [
+                { name: 'Documentação Scikit-learn: Model Evaluation', url: 'https://scikit-learn.org/stable/modules/model_evaluation.html', type: 'Documentação' },
+                { name: 'Tutorial: Cross-validation e Métricas', url: 'https://realpython.com/model-evaluation-python/', type: 'Tutorial' }
+            ],
+            'Técnicas Avançadas e Modelos Preditivos': [
+                { name: 'Random Forest e Gradient Boosting', url: 'https://scikit-learn.org/stable/ensemble.html', type: 'Documentação' },
+                { name: 'Vídeo: Modelos Preditivos em Machine Learning', url: 'https://www.youtube.com/watch?v=IpGxLWOIZy4', type: 'Vídeo' }
+            ]
+        },
         topics: [
-            'Componentes visuais e layouts responsivos',
-            'Tipografia e cores',
-            'Design system para Android e iOS',
-            'Navegação entre telas',
-            'Boas práticas de UX para mobile'
+            'Introdução ao Machine Learning',
+            'Algoritmos Supervisionados',
+            'Algoritmos Não Supervisionados',
+            'Validação e Avaliação de Modelos',
+            'Técnicas Avançadas e Modelos Preditivos'
         ],
         exercises: [
             {
-                id: 'ui_1',
-                question: 'Qual framework segue as diretrizes de Material Design?',
-                options: ['SwiftUI', 'Flutter', 'React Native', 'Xamarin'],
-                correct: 1,
-                explanation: 'O Flutter utiliza o Material Design como base para a construção de interfaces Android e multiplataforma.'
+                id: 'ml_1',
+                question: 'Qual tipo de algoritmo é usado quando se tem dados com rótulos conhecidos?',
+                options: ['Supervisionado', 'Não supervisionado', 'Reforço', 'Semi-supervisionado'],
+                correct: 0,
+                explanation: 'Algoritmos supervisionados utilizam dados rotulados para treinar o modelo e fazer previsões.'
             },
             {
-                id: 'ui_2',
-                question: 'O que define uma boa experiência de usuário (UX) em aplicativos?',
-                options: ['Animações complexas', 'Interface minimalista e navegação intuitiva', 'Uso intensivo de cores', 'Maior número de telas'],
+                id: 'ml_2',
+                question: 'Qual técnica é mais adequada para agrupar dados sem rótulos?',
+                options: ['Regressão', 'Clusterização', 'Classificação', 'Redução de dimensionalidade'],
                 correct: 1,
-                explanation: 'Uma boa UX prioriza clareza, simplicidade e usabilidade, facilitando a navegação do usuário.'
-            }
-        ]
-    },
-    apis: {
-        title: 'Integração com APIs e Bancos de Dados',
-        description: 'Aprenda a consumir APIs, trabalhar com dados locais e conectar seus apps a serviços externos como Firebase.',
-        points: 150,
-        resources: [
-            { name: 'Firebase Firestore', url: 'https://firebase.google.com/docs/firestore', type: 'Documentação' },
-            { name: 'HTTP Package - Flutter', url: 'https://pub.dev/packages/http', type: 'Biblioteca' },
-            { name: 'Axios - React Native', url: 'https://axios-http.com/', type: 'Biblioteca' }
-        ],
-        topics: [
-            'Consumo de APIs REST',
-            'Manipulação de JSON',
-            'Banco de dados local (SQLite, Hive)',
-            'Integração com Firebase',
-            'Sincronização offline e online'
-        ],
-        exercises: [
-            {
-                id: 'api_1',
-                question: 'Qual formato é mais utilizado na comunicação entre apps e APIs?',
-                options: ['XML', 'JSON', 'HTML', 'YAML'],
-                correct: 1,
-                explanation: 'O formato JSON é o mais comum por ser leve e fácil de interpretar em linguagens como Dart e JavaScript.'
+                explanation: 'Clusterização é uma técnica de aprendizado não supervisionado usada para agrupar dados similares.'
             },
             {
-                id: 'api_2',
-                question: 'Qual serviço oferece autenticação e banco de dados em tempo real para apps?',
-                options: ['MongoDB Atlas', 'Firebase', 'AWS Lambda', 'Supabase'],
-                correct: 1,
-                explanation: 'O Firebase é uma plataforma completa do Google que oferece autenticação, banco de dados e armazenamento em nuvem.'
-            }
-        ]
-    },
-    frameworks: {
-        title: 'Frameworks e Ferramentas Mobile',
-        description: 'Conheça os principais frameworks para desenvolvimento de aplicativos modernos e multiplataforma.',
-        points: 130,
-        resources: [
-            { name: 'Flutter.dev', url: 'https://flutter.dev/', type: 'Documentação' },
-            { name: 'React Native Docs', url: 'https://reactnative.dev/', type: 'Documentação' },
-            { name: 'Kotlin Android', url: 'https://developer.android.com/kotlin', type: 'Guia' }
-        ],
-        topics: [
-            'Arquitetura de apps Flutter (Widgets, State)',
-            'React Native e componentes reutilizáveis',
-            'Gerenciamento de estado (Provider, Redux)',
-            'Build e deploy para Android/iOS',
-            'Integração com APIs nativas'
-        ],
-        exercises: [
+                id: 'ml_3',
+                question: 'O que é Cross-validation em Machine Learning?',
+                options: [
+                    'Separar dados em treino e teste múltiplas vezes para avaliar o modelo',
+                    'Ajustar hiperparâmetros manualmente',
+                    'Reduzir o tamanho do dataset',
+                    'Executar regressão linear'
+                ],
+                correct: 0,
+                explanation: 'Cross-validation divide o dataset em múltiplos folds, treinando e testando o modelo para medir sua performance.'
+            },
             {
-                id: 'fw_1',
-                question: 'Qual linguagem é usada pelo Flutter?',
-                options: ['Kotlin', 'Swift', 'Dart', 'JavaScript'],
+                id: 'ml_4',
+                question: 'Qual técnica é usada para aumentar a acurácia de modelos preditivos combinando múltiplos modelos?',
+                options: ['Bagging', 'PCA', 'Normalização', 'Regressão Linear'],
+                correct: 0,
+                explanation: 'Bagging (como Random Forest) combina múltiplos modelos para reduzir variância e melhorar a performance.'
+            },
+            {
+                id: 'ml_5',
+                question: 'Qual biblioteca Python é referência para implementar modelos de machine learning?',
+                options: ['NumPy', 'Pandas', 'Scikit-learn', 'Matplotlib'],
                 correct: 2,
-                explanation: 'O Flutter utiliza a linguagem Dart, desenvolvida pelo Google, para construir apps multiplataforma.'
-            },
-            {
-                id: 'fw_2',
-                question: 'Qual comando é usado para iniciar um novo projeto Flutter?',
-                options: ['flutter make', 'flutter new', 'flutter create', 'flutter init'],
-                correct: 2,
-                explanation: 'O comando "flutter create" gera a estrutura inicial de um novo projeto Flutter.'
+                explanation: 'Scikit-learn fornece ferramentas completas para construir, treinar e avaliar modelos de machine learning em Python.'
             }
         ]
     },
-    projetos: {
-        title: 'Projetos Práticos Mobile',
-        description: 'Aplique seus conhecimentos criando apps reais e publicando nas lojas com boas práticas e otimização.',
+    visualizacao: {
+        title: 'Visualização e Storytelling com Dados',
+        description: 'Aprenda a transformar dados em histórias visuais impactantes, utilizando técnicas de visualização, dashboards e storytelling para comunicar insights de forma eficaz.',
         points: 100,
-        resources: [
-            { name: 'Publicando no Google Play', url: 'https://developer.android.com/studio/publish', type: 'Guia' },
-            { name: 'Publicando na App Store', url: 'https://developer.apple.com/app-store/submissions/', type: 'Guia' },
-            { name: 'CI/CD para Mobile com Codemagic', url: 'https://codemagic.io/start/', type: 'Ferramenta' }
-        ],
+        detailedResources: {
+            'Princípios de Visualização de Dados': [
+                { name: 'Data Visualization Guide', url: 'https://datavizcatalogue.com/', type: 'Guia' },
+                { name: 'Curso de Visualização de Dados', url: 'https://www.coursera.org/learn/datavisualization', type: 'Tutorial' },
+                { name: 'Vídeo: Princípios de Visualização', url: 'https://www.youtube.com/watch?v=O1LQrg-2H4A', type: 'Vídeo' }
+            ],
+            'Ferramentas de Visualização em Python': [
+                { name: 'Matplotlib Documentation', url: 'https://matplotlib.org/stable/contents.html', type: 'Documentação' },
+                { name: 'Seaborn Official Docs', url: 'https://seaborn.pydata.org/', type: 'Documentação' },
+                { name: 'Vídeo: Gráficos com Python', url: 'https://www.youtube.com/watch?v=FytuLxg1tQI', type: 'Vídeo' }
+            ],
+            'Dashboards Interativos': [
+                { name: 'Plotly Dash Guide', url: 'https://dash.plotly.com/', type: 'Tutorial' },
+                { name: 'Streamlit Documentation', url: 'https://docs.streamlit.io/', type: 'Documentação' },
+                { name: 'Vídeo: Dashboards com Python', url: 'https://www.youtube.com/watch?v=Kd-5FKXuflQ', type: 'Vídeo' }
+            ],
+            'Storytelling com Dados': [
+                { name: 'Storytelling with Data', url: 'https://www.storytellingwithdata.com/', type: 'Livro' },
+                { name: 'Curso: Comunicação de Insights', url: 'https://www.coursera.org/learn/communication-data', type: 'Tutorial' },
+                { name: 'Vídeo: Data Storytelling', url: 'https://www.youtube.com/watch?v=4ldS4aKjI_k', type: 'Vídeo' }
+            ],
+            'Boas práticas e design visual': [
+                { name: 'DataViz Best Practices', url: 'https://www.data-to-viz.com/', type: 'Guia' },
+                { name: 'Vídeo: Design de Gráficos', url: 'https://www.youtube.com/watch?v=O5a5CgqI9ko', type: 'Vídeo' }
+            ]
+        },
         topics: [
-            'Criação de apps completos (To-do, Clima, Notas, etc.)',
-            'Autenticação e push notifications',
-            'Testes e depuração',
-            'Publicação nas lojas',
-            'Ciclo de manutenção e atualizações'
+            'Princípios de Visualização de Dados',
+            'Ferramentas de Visualização em Python',
+            'Dashboards Interativos',
+            'Storytelling com Dados',
+            'Boas práticas e design visual'
         ],
         exercises: [
             {
-                id: 'proj_1',
-                question: 'Qual é o primeiro passo antes de publicar um app na Google Play?',
-                options: [
-                    'Fazer o deploy no GitHub',
-                    'Gerar o APK ou AAB assinado',
-                    'Enviar o código-fonte',
-                    'Criar uma conta no Firebase'
-                ],
+                id: 'viz_1',
+                question: 'Qual biblioteca Python é mais adequada para criar gráficos estatísticos avançados?',
+                options: ['Matplotlib', 'Seaborn', 'NumPy', 'Pandas'],
                 correct: 1,
-                explanation: 'Antes da publicação, é necessário gerar um APK/AAB assinado e configurado com o nome do pacote e ícones oficiais.'
+                explanation: 'Seaborn é construída sobre Matplotlib e facilita a criação de gráficos estatísticos avançados.'
             },
             {
-                id: 'proj_2',
-                question: 'O que é um push notification?',
+                id: 'viz_2',
+                question: 'Qual ferramenta permite criar dashboards interativos em Python facilmente?',
+                options: ['Matplotlib', 'Plotly Dash', 'Scikit-learn', 'NumPy'],
+                correct: 1,
+                explanation: 'Plotly Dash permite criar dashboards interativos com componentes Python facilmente.'
+            },
+            {
+                id: 'viz_3',
+                question: 'Qual é o objetivo do storytelling com dados?',
                 options: [
-                    'Um aviso do sistema operacional',
-                    'Uma mensagem enviada pelo servidor ao app',
-                    'Uma API de localização',
-                    'Um tipo de animação'
+                    'Executar scripts rapidamente',
+                    'Transformar dados em histórias visuais que comuniquem insights',
+                    'Organizar arquivos CSV',
+                    'Otimizar algoritmos de machine learning'
                 ],
                 correct: 1,
-                explanation: 'Push notifications são mensagens enviadas por servidores para informar ou engajar o usuário mesmo com o app fechado.'
+                explanation: 'Storytelling com dados busca comunicar insights de forma clara e impactante usando visualizações.'
+            },
+            {
+                id: 'viz_4',
+                question: 'Qual é uma boa prática de design visual para gráficos?',
+                options: [
+                    'Evitar cores contrastantes',
+                    'Adicionar informações irrelevantes',
+                    'Usar cores consistentes e destacar pontos importantes',
+                    'Sobrecarregar gráficos com textos'
+                ],
+                correct: 2,
+                explanation: 'Boas práticas de design visual incluem uso de cores consistentes e destacar informações relevantes.'
+            },
+            {
+                id: 'viz_5',
+                question: 'Qual biblioteca é indicada para visualizações rápidas e interativas em Python?',
+                options: ['Streamlit', 'NumPy', 'Pandas', 'Matplotlib'],
+                correct: 0,
+                explanation: 'Streamlit permite criar aplicações web interativas e visualizações de dados rapidamente.'
+            }
+        ]
+    },
+
+    bigData: {
+        title: 'Big Data e Ferramentas de Análise em Larga Escala',
+        description: 'Explore conceitos de Big Data, armazenamento distribuído, processamento em larga escala e análise de grandes volumes de dados utilizando ferramentas modernas.',
+        points: 95,
+        detailedResources: {
+            'Fundamentos de Big Data': [
+                { name: 'Big Data Guide', url: 'https://www.edureka.co/blog/what-is-big-data/', type: 'Guia' },
+                { name: 'Curso: Introdução ao Big Data', url: 'https://www.coursera.org/learn/big-data-introduction', type: 'Tutorial' },
+                { name: 'Vídeo: Conceitos de Big Data', url: 'https://www.youtube.com/watch?v=vwQVjjHn8Xk', type: 'Vídeo' }
+            ],
+            'Hadoop e MapReduce': [
+                { name: 'Hadoop Official Docs', url: 'https://hadoop.apache.org/docs/', type: 'Documentação' },
+                { name: 'Tutorial MapReduce', url: 'https://hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html', type: 'Tutorial' },
+                { name: 'Vídeo: Hadoop e MapReduce', url: 'https://www.youtube.com/watch?v=PLlVqY3jR_g', type: 'Vídeo' }
+            ],
+            'Apache Spark': [
+                { name: 'Spark Official Docs', url: 'https://spark.apache.org/docs/latest/', type: 'Documentação' },
+                { name: 'Curso: Spark para Big Data', url: 'https://www.udemy.com/course/apache-spark-with-python-hands-on-with-pyspark/', type: 'Tutorial' },
+                { name: 'Vídeo: Processamento com Spark', url: 'https://www.youtube.com/watch?v=2dfyD3si9q8', type: 'Vídeo' }
+            ],
+            'NoSQL e bancos de dados distribuídos': [
+                { name: 'MongoDB Official Docs', url: 'https://www.mongodb.com/docs/', type: 'Documentação' },
+                { name: 'Cassandra Documentation', url: 'https://cassandra.apache.org/doc/latest/', type: 'Documentação' },
+                { name: 'Vídeo: Bancos de dados NoSQL', url: 'https://www.youtube.com/watch?v=qI_g07C_Q5I', type: 'Vídeo' }
+            ],
+            'Análise de Big Data e boas práticas': [
+                { name: 'Data Engineering Guide', url: 'https://www.data-engineering.org/', type: 'Guia' },
+                { name: 'Vídeo: Arquitetura Big Data', url: 'https://www.youtube.com/watch?v=VtTk3a6klI0', type: 'Vídeo' }
+            ]
+        },
+        topics: [
+            'Fundamentos de Big Data',
+            'Hadoop e MapReduce',
+            'Apache Spark',
+            'NoSQL e bancos de dados distribuídos',
+            'Análise de Big Data e boas práticas'
+        ],
+        exercises: [
+            {
+                id: 'bigdata_1',
+                question: 'Qual é o objetivo principal do Hadoop?',
+                options: [
+                    'Processar dados em larga escala distribuídos em múltiplos servidores',
+                    'Criar dashboards interativos',
+                    'Executar scripts Python locais',
+                    'Gerenciar banco de dados relacional'
+                ],
+                correct: 0,
+                explanation: 'Hadoop permite processar grandes volumes de dados distribuídos em clusters de servidores.'
+            },
+            {
+                id: 'bigdata_2',
+                question: 'Qual ferramenta é mais indicada para processamento de dados em memória e em larga escala?',
+                options: ['Spark', 'NumPy', 'Matplotlib', 'Pandas'],
+                correct: 0,
+                explanation: 'Apache Spark processa dados em memória, permitindo análises rápidas em grandes volumes de dados.'
+            },
+            {
+                id: 'bigdata_3',
+                question: 'Qual banco de dados é do tipo NoSQL usado em Big Data?',
+                options: ['MySQL', 'MongoDB', 'SQLite', 'PostgreSQL'],
+                correct: 1,
+                explanation: 'MongoDB é um banco de dados NoSQL, ideal para armazenar dados não estruturados e em larga escala.'
+            },
+            {
+                id: 'bigdata_4',
+                question: 'O que é MapReduce?',
+                options: [
+                    'Um algoritmo de machine learning',
+                    'Um padrão de processamento distribuído de grandes volumes de dados',
+                    'Uma ferramenta de visualização',
+                    'Um editor de dados CSV'
+                ],
+                correct: 1,
+                explanation: 'MapReduce é um modelo de programação para processamento distribuído de dados grandes em clusters.'
+            },
+            {
+                id: 'bigdata_5',
+                question: 'Qual é uma boa prática na análise de Big Data?',
+                options: [
+                    'Ignorar a qualidade dos dados',
+                    'Processar apenas dados pequenos localmente',
+                    'Validar, limpar e organizar dados antes da análise',
+                    'Utilizar apenas planilhas Excel'
+                ],
+                correct: 2,
+                explanation: 'Boas práticas incluem validar, limpar e organizar dados para garantir análises confiáveis e precisas.'
+            }
+        ]
+    },
+
+    projetosPraticos: {
+        title: 'Projetos Práticos de Análise de Dados',
+        description: 'Aplique os conhecimentos adquiridos em projetos reais de análise de dados, integrando estatística, Python, machine learning, visualização e Big Data.',
+        points: 125,
+        detailedResources: {
+            'Análise exploratória de dados': [
+                { name: 'Kaggle EDA Tutorial', url: 'https://www.kaggle.com/learn/data-visualization', type: 'Tutorial' },
+                { name: 'Documentação Pandas', url: 'https://pandas.pydata.org/docs/', type: 'Documentação' },
+                { name: 'Vídeo: EDA com Python', url: 'https://www.youtube.com/watch?v=H1elmMBnykA', type: 'Vídeo' }
+            ],
+            'Modelagem preditiva': [
+                { name: 'Scikit-Learn Docs', url: 'https://scikit-learn.org/stable/', type: 'Documentação' },
+                { name: 'Curso de Machine Learning Prático', url: 'https://www.coursera.org/learn/machine-learning-project', type: 'Tutorial' },
+                { name: 'Vídeo: Projeto de ML do início ao fim', url: 'https://www.youtube.com/watch?v=7eh4d6sabA0', type: 'Vídeo' }
+            ],
+            'Visualização e storytelling': [
+                { name: 'Seaborn Docs', url: 'https://seaborn.pydata.org/', type: 'Documentação' },
+                { name: 'Plotly Tutorials', url: 'https://plotly.com/python/', type: 'Tutorial' },
+                { name: 'Vídeo: Dashboards interativos', url: 'https://www.youtube.com/watch?v=hSPmj7mK6ng', type: 'Vídeo' }
+            ],
+            'Projetos com Big Data': [
+                { name: 'Curso Apache Spark Prático', url: 'https://www.udemy.com/course/apache-spark-with-python-hands-on-with-pyspark/', type: 'Tutorial' },
+                { name: 'Documentação Hadoop', url: 'https://hadoop.apache.org/docs/', type: 'Documentação' },
+                { name: 'Vídeo: Projeto de Big Data', url: 'https://www.youtube.com/watch?v=VtTk3a6klI0', type: 'Vídeo' }
+            ]
+        },
+        topics: [
+            'Análise exploratória de dados',
+            'Modelagem preditiva',
+            'Visualização e storytelling',
+            'Projetos com Big Data'
+        ],
+        exercises: [
+            {
+                id: 'projeto_1',
+                question: 'Qual é o objetivo principal da análise exploratória de dados (EDA)?',
+                options: [
+                    'Criar dashboards interativos',
+                    'Explorar, limpar e entender os dados antes da modelagem',
+                    'Executar scripts de machine learning sem validação',
+                    'Armazenar dados em bancos NoSQL'
+                ],
+                correct: 1,
+                explanation: 'EDA permite explorar, limpar e entender os dados, identificando padrões e inconsistências antes da modelagem.'
+            },
+            {
+                id: 'projeto_2',
+                question: 'Qual biblioteca Python é mais utilizada para visualização avançada de dados?',
+                options: ['NumPy', 'Seaborn', 'Scikit-Learn', 'Requests'],
+                correct: 1,
+                explanation: 'Seaborn permite criar gráficos estatísticos avançados e integrados com Pandas.'
+            },
+            {
+                id: 'projeto_3',
+                question: 'O que é essencial em um projeto prático de Machine Learning?',
+                options: [
+                    'Aplicar modelos sem entender os dados',
+                    'Testar e validar modelos em dados reais',
+                    'Somente usar dados gerados aleatoriamente',
+                    'Não documentar resultados'
+                ],
+                correct: 1,
+                explanation: 'Projetos práticos exigem testar e validar modelos em dados reais, garantindo resultados confiáveis.'
+            },
+            {
+                id: 'projeto_4',
+                question: 'Por que integrar Big Data em projetos práticos é importante?',
+                options: [
+                    'Para armazenar apenas planilhas pequenas',
+                    'Para processar grandes volumes de dados e obter insights escaláveis',
+                    'Para evitar aprendizado de Python',
+                    'Para simplificar a visualização em CSV'
+                ],
+                correct: 1,
+                explanation: 'O Big Data permite processar grandes volumes de dados, garantindo análises escaláveis e eficientes.'
+            },
+            {
+                id: 'projeto_5',
+                question: 'Qual é a finalidade do storytelling com dados?',
+                options: [
+                    'Criar gráficos bonitos sem contexto',
+                    'Comunicar insights de forma clara e impactante',
+                    'Esconder resultados negativos',
+                    'Somente gerar relatórios técnicos complexos'
+                ],
+                correct: 1,
+                explanation: 'Storytelling com dados transforma análises em histórias compreensíveis e impactantes para stakeholders.'
             }
         ]
     }
@@ -2013,7 +2332,24 @@
             const isCompleted = progressTracker.data.topicProgress[topicKey]?.completed || false;
 
             panelTitle.textContent = topic.title;
-            
+
+            // Monta o HTML dos tópicos e recursos detalhados
+            const topicsHtml = topic.topics.map(item => {
+                const detailed = topic.detailedResources?.[item] || [];
+                const detailedHtml = detailed.length
+                    ? `<ul class="detailed-resource-list">
+                            ${detailed.map(r => `<li>
+                                <a href="${r.url}" target="_blank" class="resource-link">${r.name}</a> 
+                                <span class="resource-type">${r.type}</span>
+                            </li>`).join('')}
+                    </ul>`
+                    : '';
+                return `<li>
+                            <strong>${item}</strong>
+                            ${detailedHtml}
+                        </li>`;
+            }).join('');
+
             panelContent.innerHTML = `
                 <div class="topic-overview">
                     <p>${topic.description}</p>
@@ -2025,21 +2361,7 @@
                 <div class="resource-section">
                     <h4>📚 O que você vai aprender:</h4>
                     <ul class="topic-list">
-                        ${topic.topics.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                </div>
-
-                <div class="resource-section">
-                    <h4>🔗 Recursos de Aprendizado:</h4>
-                    <ul class="resource-list">
-                        ${topic.resources.map(resource => `
-                            <li class="resource-item">
-                                <a href="${resource.url}" class="resource-link" target="_blank">
-                                    ${resource.name}
-                                </a>
-                                <span class="resource-type">${resource.type}</span>
-                            </li>
-                        `).join('')}
+                        ${topicsHtml}
                     </ul>
                 </div>
 
@@ -2058,6 +2380,7 @@
 
             sidePanel.classList.add('active');
         }
+
 
         // Função para fechar o painel lateral
         function closeSidePanel() {

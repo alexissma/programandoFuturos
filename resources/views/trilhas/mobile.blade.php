@@ -1668,16 +1668,38 @@
         }
 
         // Dados dos tópicos com exercícios
-        const topicsData = {
-        fundamentos: {
+    const topicsData = {
+    fundamentos: {
         title: 'Fundamentos do Desenvolvimento Mobile',
         description: 'Aprenda os conceitos essenciais para criar aplicativos Android e iOS, entendendo a diferença entre apps nativos e multiplataforma.',
         points: 100,
-        resources: [
-            { name: 'Android Developers - Fundamentos', url: 'https://developer.android.com/guide', type: 'Documentação' },
-            { name: 'Apple Developer - iOS Essentials', url: 'https://developer.apple.com/learn/curriculum/', type: 'Guia' },
-            { name: 'Introdução ao Flutter', url: 'https://flutter.dev/docs/get-started/install', type: 'Tutorial' }
-        ],
+        detailedResources: {
+            'Diferenças entre apps nativos, híbridos e multiplataforma': [
+                { name: 'Android Developers - Fundamentos', url: 'https://developer.android.com/guide', type: 'Documentação' },
+                { name: 'Apple Developer - iOS Essentials', url: 'https://developer.apple.com/learn/curriculum/', type: 'Guia' },
+                { name: 'Vídeo: Nativo vs Híbrido vs Multiplataforma', url: 'https://www.youtube.com/watch?v=3MQMb4nP44w', type: 'Vídeo' }
+            ],
+            'Ciclo de vida de um aplicativo mobile': [
+                { name: 'MDN - Lifecycle of Mobile Apps', url: 'https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_first_mobile_app#lifecycle_of_a_mobile_app', type: 'Documentação' },
+                { name: 'Android Lifecycle Overview', url: 'https://developer.android.com/guide/components/activities/activity-lifecycle', type: 'Documentação' },
+                { name: 'Vídeo: Android Activity Lifecycle', url: 'https://www.youtube.com/watch?v=3hC3n3Q6b1Q', type: 'Vídeo' }
+            ],
+            'Ambiente de desenvolvimento Android e iOS': [
+                { name: 'Android Studio Guide', url: 'https://developer.android.com/studio/intro', type: 'Documentação' },
+                { name: 'Xcode Overview', url: 'https://developer.apple.com/xcode/', type: 'Guia' },
+                { name: 'Vídeo: Configuração de Android Studio e Xcode', url: 'https://www.youtube.com/watch?v=ud0NJYFjh1o', type: 'Vídeo' }
+            ],
+            'Emuladores e dispositivos físicos': [
+                { name: 'Android Emulator', url: 'https://developer.android.com/studio/run/emulator', type: 'Documentação' },
+                { name: 'iOS Simulator', url: 'https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device', type: 'Guia' },
+                { name: 'Vídeo: Testando apps em emuladores e dispositivos', url: 'https://www.youtube.com/watch?v=QG5zN1hN4zA', type: 'Vídeo' }
+            ],
+            'Introdução ao Flutter e React Native': [
+                { name: 'Flutter Official Docs', url: 'https://flutter.dev/docs/get-started/install', type: 'Tutorial' },
+                { name: 'React Native Docs', url: 'https://reactnative.dev/docs/getting-started', type: 'Documentação' },
+                { name: 'Vídeo: Flutter vs React Native', url: 'https://www.youtube.com/watch?v=1gDhl4leEzA', type: 'Vídeo' }
+            ]
+        },
         topics: [
             'Diferenças entre apps nativos, híbridos e multiplataforma',
             'Ciclo de vida de um aplicativo mobile',
@@ -1719,15 +1741,38 @@
             }
         ]
     },
+
     interface: {
         title: 'Design e Interface (UI/UX)',
         description: 'Aprenda a criar interfaces bonitas, responsivas e intuitivas utilizando os princípios de Material Design e Human Interface Guidelines.',
         points: 120,
-        resources: [
-            { name: 'Material Design 3', url: 'https://m3.material.io/', type: 'Guia' },
-            { name: 'Human Interface Guidelines', url: 'https://developer.apple.com/design/human-interface-guidelines/', type: 'Guia' },
-            { name: 'Figma para Mobile', url: 'https://www.figma.com/resources/learn-design/', type: 'Ferramenta' }
-        ],
+        detailedResources: {
+            'Componentes visuais e layouts responsivos': [
+                { name: 'Material Design 3', url: 'https://m3.material.io/', type: 'Guia' },
+                { name: 'Figma - Layouts Responsivos', url: 'https://help.figma.com/hc/en-us/articles/360040518233-Responsive-Design-in-Figma', type: 'Tutorial' },
+                { name: 'Vídeo: UI Design Responsivo', url: 'https://www.youtube.com/watch?v=Ovj4hFxko7c', type: 'Vídeo' }
+            ],
+            'Tipografia e cores': [
+                { name: 'Material Design Typography', url: 'https://m3.material.io/styles/typography', type: 'Guia' },
+                { name: 'Color Theory - Figma', url: 'https://help.figma.com/hc/en-us/articles/360040518273-Colors-in-Figma', type: 'Tutorial' },
+                { name: 'Vídeo: Tipografia e Paletas de Cor', url: 'https://www.youtube.com/watch?v=6C8gg8cNfLc', type: 'Vídeo' }
+            ],
+            'Design system para Android e iOS': [
+                { name: 'Material Design System', url: 'https://material.io/design', type: 'Guia' },
+                { name: 'Apple Human Interface Guidelines', url: 'https://developer.apple.com/design/human-interface-guidelines/', type: 'Guia' },
+                { name: 'Vídeo: Criando Design Systems Mobile', url: 'https://www.youtube.com/watch?v=yscEYfAAOa0', type: 'Vídeo' }
+            ],
+            'Navegação entre telas': [
+                { name: 'Flutter Navigation', url: 'https://flutter.dev/docs/development/ui/navigation', type: 'Documentação' },
+                { name: 'React Navigation Docs', url: 'https://reactnavigation.org/docs/getting-started', type: 'Documentação' },
+                { name: 'Vídeo: Mobile App Navigation Patterns', url: 'https://www.youtube.com/watch?v=djAaE5k6yCk', type: 'Vídeo' }
+            ],
+            'Boas práticas de UX para mobile': [
+                { name: 'NNGroup - Mobile UX', url: 'https://www.nngroup.com/articles/mobile-ux/', type: 'Artigo' },
+                { name: 'Figma Learn UX', url: 'https://www.figma.com/resources/learn-design/', type: 'Tutorial' },
+                { name: 'Vídeo: Mobile UX Tips', url: 'https://www.youtube.com/watch?v=1a_2xgmnG0A', type: 'Vídeo' }
+            ]
+        },
         topics: [
             'Componentes visuais e layouts responsivos',
             'Tipografia e cores',
@@ -1752,15 +1797,38 @@
             }
         ]
     },
+
     apis: {
         title: 'Integração com APIs e Bancos de Dados',
         description: 'Aprenda a consumir APIs, trabalhar com dados locais e conectar seus apps a serviços externos como Firebase.',
         points: 150,
-        resources: [
-            { name: 'Firebase Firestore', url: 'https://firebase.google.com/docs/firestore', type: 'Documentação' },
-            { name: 'HTTP Package - Flutter', url: 'https://pub.dev/packages/http', type: 'Biblioteca' },
-            { name: 'Axios - React Native', url: 'https://axios-http.com/', type: 'Biblioteca' }
-        ],
+        detailedResources: {
+            'Consumo de APIs REST': [
+                { name: 'HTTP Package - Flutter', url: 'https://pub.dev/packages/http', type: 'Biblioteca' },
+                { name: 'Axios - React Native', url: 'https://axios-http.com/', type: 'Biblioteca' },
+                { name: 'Vídeo: Consumindo APIs com Flutter e React Native', url: 'https://www.youtube.com/watch?v=DUe3e8Bwt8Q', type: 'Vídeo' }
+            ],
+            'Manipulação de JSON': [
+                { name: 'MDN - Working with JSON', url: 'https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON', type: 'Documentação' },
+                { name: 'Flutter JSON Serialization', url: 'https://flutter.dev/docs/development/data-and-backend/json', type: 'Documentação' },
+                { name: 'Vídeo: JSON Parsing em Mobile', url: 'https://www.youtube.com/watch?v=ZK4Wz8J6sZI', type: 'Vídeo' }
+            ],
+            'Banco de dados local (SQLite, Hive)': [
+                { name: 'SQLite Flutter', url: 'https://pub.dev/packages/sqflite', type: 'Biblioteca' },
+                { name: 'Hive DB Docs', url: 'https://docs.hivedb.dev/#/', type: 'Documentação' },
+                { name: 'Vídeo: Armazenamento Local Mobile', url: 'https://www.youtube.com/watch?v=2YDh0WivYdw', type: 'Vídeo' }
+            ],
+            'Integração com Firebase': [
+                { name: 'Firebase Firestore', url: 'https://firebase.google.com/docs/firestore', type: 'Documentação' },
+                { name: 'Firebase Auth', url: 'https://firebase.google.com/docs/auth', type: 'Documentação' },
+                { name: 'Vídeo: Integrando Firebase em Flutter e React Native', url: 'https://www.youtube.com/watch?v=9kRgVxULbag', type: 'Vídeo' }
+            ],
+            'Sincronização offline e online': [
+                { name: 'Firebase Offline Capabilities', url: 'https://firebase.google.com/docs/firestore/manage-data/enable-offline', type: 'Documentação' },
+                { name: 'Flutter Offline Data', url: 'https://flutter.dev/docs/cookbook/persistence/offline', type: 'Tutorial' },
+                { name: 'Vídeo: Offline-First Mobile Apps', url: 'https://www.youtube.com/watch?v=X6XyU0G8gFY', type: 'Vídeo' }
+            ]
+        },
         topics: [
             'Consumo de APIs REST',
             'Manipulação de JSON',
@@ -1785,15 +1853,38 @@
             }
         ]
     },
+
     frameworks: {
         title: 'Frameworks e Ferramentas Mobile',
         description: 'Conheça os principais frameworks para desenvolvimento de aplicativos modernos e multiplataforma.',
         points: 130,
-        resources: [
-            { name: 'Flutter.dev', url: 'https://flutter.dev/', type: 'Documentação' },
-            { name: 'React Native Docs', url: 'https://reactnative.dev/', type: 'Documentação' },
-            { name: 'Kotlin Android', url: 'https://developer.android.com/kotlin', type: 'Guia' }
-        ],
+        detailedResources: {
+            'Arquitetura de apps Flutter (Widgets, State)': [
+                { name: 'Flutter Widgets', url: 'https://flutter.dev/docs/development/ui/widgets', type: 'Documentação' },
+                { name: 'Flutter State Management', url: 'https://flutter.dev/docs/development/data-and-backend/state-mgmt/intro', type: 'Documentação' },
+                { name: 'Vídeo: Flutter Widgets e State', url: 'https://www.youtube.com/watch?v=1gDhl4leEzA', type: 'Vídeo' }
+            ],
+            'React Native e componentes reutilizáveis': [
+                { name: 'React Native Components', url: 'https://reactnative.dev/docs/components-and-apis', type: 'Documentação' },
+                { name: 'React Native Reusable Components', url: 'https://reactnative.dev/docs/intro-react-native-components', type: 'Tutorial' },
+                { name: 'Vídeo: Criando Componentes React Native', url: 'https://www.youtube.com/watch?v=0-S5a0eXPoc', type: 'Vídeo' }
+            ],
+            'Gerenciamento de estado (Provider, Redux)': [
+                { name: 'Flutter Provider', url: 'https://pub.dev/packages/provider', type: 'Biblioteca' },
+                { name: 'Redux - React Native', url: 'https://redux.js.org/', type: 'Documentação' },
+                { name: 'Vídeo: State Management Flutter e React Native', url: 'https://www.youtube.com/watch?v=5r6yzFJjO6Y', type: 'Vídeo' }
+            ],
+            'Build e deploy para Android/iOS': [
+                { name: 'Flutter Deployment', url: 'https://flutter.dev/docs/deployment', type: 'Documentação' },
+                { name: 'React Native Deployment', url: 'https://reactnative.dev/docs/publishing-to-app-store', type: 'Documentação' },
+                { name: 'Vídeo: Build e Deploy Mobile', url: 'https://www.youtube.com/watch?v=8FGv5IMZT2o', type: 'Vídeo' }
+            ],
+            'Integração com APIs nativas': [
+                { name: 'Flutter Platform Channels', url: 'https://flutter.dev/docs/development/platform-integration/platform-channels', type: 'Documentação' },
+                { name: 'React Native Native Modules', url: 'https://reactnative.dev/docs/native-modules-intro', type: 'Documentação' },
+                { name: 'Vídeo: Integrando APIs Nativas', url: 'https://www.youtube.com/watch?v=j_1s0QH3KpA', type: 'Vídeo' }
+            ]
+        },
         topics: [
             'Arquitetura de apps Flutter (Widgets, State)',
             'React Native e componentes reutilizáveis',
@@ -1818,15 +1909,38 @@
             }
         ]
     },
+
     projetos: {
         title: 'Projetos Práticos Mobile',
         description: 'Aplique seus conhecimentos criando apps reais e publicando nas lojas com boas práticas e otimização.',
         points: 100,
-        resources: [
-            { name: 'Publicando no Google Play', url: 'https://developer.android.com/studio/publish', type: 'Guia' },
-            { name: 'Publicando na App Store', url: 'https://developer.apple.com/app-store/submissions/', type: 'Guia' },
-            { name: 'CI/CD para Mobile com Codemagic', url: 'https://codemagic.io/start/', type: 'Ferramenta' }
-        ],
+        detailedResources: {
+            'Criação de apps completos (To-do, Clima, Notas, etc.)': [
+                { name: 'Flutter Sample Apps', url: 'https://flutter.dev/docs/cookbook', type: 'Documentação' },
+                { name: 'React Native Sample Projects', url: 'https://reactnative.dev/docs/sample-apps', type: 'Documentação' },
+                { name: 'Vídeo: Projetos Mobile Práticos', url: 'https://www.youtube.com/watch?v=kD2yG3K3Spg', type: 'Vídeo' }
+            ],
+            'Autenticação e push notifications': [
+                { name: 'Firebase Auth Docs', url: 'https://firebase.google.com/docs/auth', type: 'Documentação' },
+                { name: 'Firebase Cloud Messaging', url: 'https://firebase.google.com/docs/cloud-messaging', type: 'Documentação' },
+                { name: 'Vídeo: Autenticação e Push Notifications', url: 'https://www.youtube.com/watch?v=1hHMwLxN6EM', type: 'Vídeo' }
+            ],
+            'Testes e depuração': [
+                { name: 'Flutter Testing', url: 'https://flutter.dev/docs/testing', type: 'Documentação' },
+                { name: 'React Native Testing', url: 'https://reactnative.dev/docs/testing-overview', type: 'Documentação' },
+                { name: 'Vídeo: Testes e Debug Mobile', url: 'https://www.youtube.com/watch?v=7UjGdDe7MUE', type: 'Vídeo' }
+            ],
+            'Publicação nas lojas': [
+                { name: 'Publicando no Google Play', url: 'https://developer.android.com/studio/publish', type: 'Guia' },
+                { name: 'Publicando na App Store', url: 'https://developer.apple.com/app-store/submissions/', type: 'Guia' },
+                { name: 'Vídeo: Publicando Apps Mobile', url: 'https://www.youtube.com/watch?v=CmP9Vp5uCzM', type: 'Vídeo' }
+            ],
+            'Ciclo de manutenção e atualizações': [
+                { name: 'Flutter Maintenance Tips', url: 'https://flutter.dev/docs/development/tools/maintenance', type: 'Tutorial' },
+                { name: 'React Native Maintenance', url: 'https://reactnative.dev/docs/upgrading', type: 'Documentação' },
+                { name: 'Vídeo: Atualizando e Mantendo Apps Mobile', url: 'https://www.youtube.com/watch?v=Jz3b_tj8C6U', type: 'Vídeo' }
+            ]
+        },
         topics: [
             'Criação de apps completos (To-do, Clima, Notas, etc.)',
             'Autenticação e push notifications',
@@ -1861,6 +1975,7 @@
             }
         ]
     }
+
 };
 
 
@@ -2048,7 +2163,23 @@
             const isCompleted = progressTracker.data.topicProgress[topicKey]?.completed || false;
 
             panelTitle.textContent = topic.title;
-            
+
+            const topicsHtml = topic.topics.map(item => {
+                const detailed = topic.detailedResources?.[item] || [];
+                const detailedHtml = detailed.length
+                    ? `<ul class="detailed-resource-list">
+                            ${detailed.map(r => `<li>
+                                <a href="${r.url}" target="_blank" class="resource-link">${r.name}</a> 
+                                <span class="resource-type">${r.type}</span>
+                            </li>`).join('')}
+                    </ul>`
+                    : '';
+                return `<li>
+                            <strong>${item}</strong>
+                            ${detailedHtml}
+                        </li>`;
+            }).join('');
+
             panelContent.innerHTML = `
                 <div class="topic-overview">
                     <p>${topic.description}</p>
@@ -2060,21 +2191,7 @@
                 <div class="resource-section">
                     <h4>📚 O que você vai aprender:</h4>
                     <ul class="topic-list">
-                        ${topic.topics.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                </div>
-
-                <div class="resource-section">
-                    <h4>🔗 Recursos de Aprendizado:</h4>
-                    <ul class="resource-list">
-                        ${topic.resources.map(resource => `
-                            <li class="resource-item">
-                                <a href="${resource.url}" class="resource-link" target="_blank">
-                                    ${resource.name}
-                                </a>
-                                <span class="resource-type">${resource.type}</span>
-                            </li>
-                        `).join('')}
+                        ${topicsHtml}
                     </ul>
                 </div>
 
@@ -2093,6 +2210,7 @@
 
             sidePanel.classList.add('active');
         }
+
 
         // Função para fechar o painel lateral
         function closeSidePanel() {
